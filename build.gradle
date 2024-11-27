@@ -1,0 +1,17 @@
+buildscript {
+    ext {
+        compose_version = '1.5.4'
+        kotlin_version = '1.9.22'
+        agp_version = '8.2.0'
+    }
+}
+
+plugins {
+    id 'com.android.application' version "$agp_version" apply false
+    id 'com.android.library' version "$agp_version" apply false
+    id 'org.jetbrains.kotlin.android' version "$kotlin_version" apply false
+    id 'com.google.dagger.hilt.android' version '2.50' apply false
+    id 'com.google.gms.google-services' version '4.4.0' apply false
+}
+
+// Remove all projects block as repositories are now managed in settings.gradle
